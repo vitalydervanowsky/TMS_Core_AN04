@@ -10,108 +10,39 @@ public class Task2 {
         System.out.print("Введите 2 целых числа (день месяц): ");
         int day = sc.nextInt();
         int month = sc.nextInt();
-        if (day > 0 && day < 32 && month > 0 && month < 13) {
+        if (day > 0 && month > 0 && month < 13) {
             System.out.print("Знак зодиака для даты " + day + "." + month + " - ");
-            switch (month) {
-                case 1: {
-                    if (day < 20) {
-                        System.out.println("река");
-                    } else {
-                        System.out.println("клаксон");
-                    }
-                    break;
-                }
-                case 2: {
-                    if (day < 21) {
-                        System.out.println("клаксон");
-                    } else {
-                        System.out.println("попугай");
-                    }
-                    break;
-                }
-                case 3: {
-                    if (day < 29) {
-                        System.out.println("попугай");
-                    } else {
-                        System.out.println("сухарь");
-                    }
-                    break;
-                }
-                case 4: {
-                    if (day < 22) {
-                        System.out.println("сухарь");
-                    } else {
-                        System.out.println("зубр");
-                    }
-                    break;
-                }
-                case 5: {
-                    if (day < 21) {
-                        System.out.println("зубр");
-                    } else {
-                        System.out.println("щека");
-                    }
-                    break;
-                }
-                case 6: {
-                    if (day < 20) {
-                        System.out.println("щека");
-                    } else {
-                        System.out.println("диктатор");
-                    }
-                    break;
-                }
-                case 7: {
-                    if (day < 21) {
-                        System.out.println("диктатор");
-                    } else {
-                        System.out.println("чай");
-                    }
-                    break;
-                }
-                case 8: {
-                    if (day < 22) {
-                        System.out.println("чай");
-                    } else {
-                        System.out.println("ключ");
-                    }
-                    break;
-                }
-                case 9: {
-                    if (day < 20) {
-                        System.out.println("ключ");
-                    } else {
-                        System.out.println("черпак");
-                    }
-                    break;
-                }
-                case 10: {
-                    if (day < 21) {
-                        System.out.println("черпак");
-                    } else {
-                        System.out.println("носорог");
-                    }
-                    break;
-                }
-                case 11: {
-                    if (day < 22) {
-                        System.out.println("носорог");
-                    } else {
-                        System.out.println("аквариум");
-                    }
-                    break;
-                }
-                case 12: {
-                    if (day < 20) {
-                        System.out.println("аквариум");
-                    } else {
-                        System.out.println("река");
-                    }
-                    break;
-                }
+            if (month == 1 && day < 20) {
+                System.out.println("река");
+            } else if ((month == 2 && day < 21) || (month == 1 && day <= 31)) {
+                System.out.println("клаксон");
+            } else if ((month == 3 && day < 20) || (month == 2 && day <= 28)) {
+                System.out.println("попугай");
+            } else if ((month == 4 && day < 21) || (month == 3 && day <= 31)) {
+                System.out.println("сухарь");
+            } else if ((month == 5 && day < 20) || (month == 4 && day <= 30)) {
+                System.out.println("зубр");
+            } else if ((month == 6 && day < 21) || (month == 5 && day <= 31)) {
+                System.out.println("щека");
+            } else if ((month == 7 && day < 20) || (month == 6 && day <= 30)) {
+                System.out.println("диктатор");
+            } else if ((month == 8 && day < 21) || (month == 7 && day <= 31)) {
+                System.out.println("чай");
+            } else if ((month == 9 && day < 20) || (month == 8 && day <= 31)) {
+                System.out.println("ключ");
+            } else if ((month == 10 && day < 21) || (month == 9 && day <= 30)) {
+                System.out.println("черпак");
+            } else if ((month == 11 && day < 20) || (month == 10 && day <= 31)) {
+                System.out.println("носорог");
+            } else if ((month == 12 && day < 21) || (month == 11 && day <= 30)) {
+                System.out.println("аквариум");
+            } else if (month == 12 && day <= 31) {
+                System.out.println("река");
+            } else {
+                System.out.println("Дата некорректна (не существует такого дня в месяце)");
             }
         } else {
-            System.out.println("Дата некорректна");
+            System.out.println("Дата некорректна (либо отрицательный день, либо такого месяца не существует)");
         }
         sc.close();
     }
