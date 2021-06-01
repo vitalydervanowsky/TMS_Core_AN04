@@ -19,7 +19,7 @@ public class Task1 {
         System.out.println("* * * Task 1.1 * * *");
         int result = 1;
         for (int j : array) {
-            if (j % 3 == 0 && j != 0) {
+            if (j % 3 == 0) {
                 result *= j;
             }
         }
