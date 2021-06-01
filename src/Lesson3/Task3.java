@@ -15,8 +15,11 @@ public class Task3 {
         }
         boolean isUnique = true;
         for (int i = 0; i < a.length; i++) {
+            if (!isUnique) {
+                break;
+            }
             for (int j = 0; j < i; j++) {
-                if (!isUnique || a[i] == a[j]) {
+                if (a[i] == a[j]) {
                     isUnique = false;
                     break;
                 }
@@ -46,7 +49,7 @@ public class Task3 {
         // 3.3*) Оценить сложности алгоритмов для 3.1 и 3.2; 3.2 должен решаться за линейное время
         System.out.println("  * * * Task 3.3 * * *");
         System.out.println("В задании 3.1 сложность O(n^2)");
-        System.out.println("В задании 3.2 сложность O(n)");
+        System.out.println("В задании 3.2 сложность O(b) (в именах моих переменных - O(bound)");
 
         // 3.4*) Дан массив длины 20, заполненнйы случайнми числами из отрезка [0;5].
         // Для каждого числа из массива найти его кол-во. Решение за линейное время
