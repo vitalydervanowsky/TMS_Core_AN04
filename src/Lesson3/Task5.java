@@ -33,10 +33,10 @@ public class Task5 {
 
         // 5.3) Найти минимальное число из диагонали, стоящей над главной
         System.out.println("  * * * Task 5.3 * * *");
-        int min = a[0][0];
-        for (int i = 1; i < a.length; i++) {
-            if (a[i][i] < min) {
-                min = a[i][i];
+        int min = a[0][1];
+        for (int i = 1; i < a.length - 1; i++) {
+            if (a[i][i + 1] < min) {
+                min = a[i][i + 1];
             }
         }
         System.out.println("min = " + min);
