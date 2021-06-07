@@ -45,8 +45,8 @@ public class Car {
         return year;
     }
 
-    public String isEngineStarted() {
-        return engine.isStarted() ? "Engine is started" : "Engine is not started";
+    public boolean isEngineStarted() {
+        return engine.isStarted();
     }
 
     public void stop() {

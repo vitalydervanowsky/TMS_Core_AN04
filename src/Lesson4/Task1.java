@@ -19,14 +19,14 @@ package Lesson4;
 
 public class Task1 {
     public static void main(String[] args) {
-        Engine engine = new Engine("Ferrari", 4500);
-        GasTank gt = new GasTank(60, 70);
+        Engine engine = new Engine("Ferrari", 4500, false);
+        GasTank gt = new GasTank(60, 40);
         Car car = new Car(engine, gt);
         car.setTitle("Ferrari F40");
         car.setDistance(10000);
         car.setYear(1993);
         System.out.println("Total distance is " + car.getDistance() + "km");
-        System.out.println(car.isEngineStarted());
+        System.out.println(car.isEngineStarted() ? "Engine is started" : "Engine is not started");
         car.run();
         car.stop();
         System.out.println("Total distance is " + car.getDistance() + "km");

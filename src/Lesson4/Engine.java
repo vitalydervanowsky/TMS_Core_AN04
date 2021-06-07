@@ -3,11 +3,12 @@ package Lesson4;
 public class Engine {
     private final String name;
     private final int volume;
-    private boolean started = false;
+    private boolean started;
 
-    public Engine(String name, int volume) {
+    public Engine(String name, int volume, boolean started) {
         this.name = name;
         this.volume = volume;
+        this.started = started;
     }
 
     public void start(GasTank gasTank) {
