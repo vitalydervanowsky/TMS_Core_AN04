@@ -1,6 +1,6 @@
 package Lesson5;
 
-public class Warrior {
+public abstract class Warrior {
     private final String name;
     private final Race race;
     private final Weapon weapon;
@@ -19,15 +19,11 @@ public class Warrior {
         celebrate();
     }
 
-    public void takeWeapon(Weapon weapon) {
-    }
+    public abstract void takeWeapon(Weapon weapon);
 
-    public void sayHa() {
-    }
+    public abstract void sayHa();
 
-    public void attack() {
-    }
+    public abstract void attack();
 
-    public void celebrate() {
-    }
+    public abstract void celebrate();
 }
